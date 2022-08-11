@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CAS.CarDetail"
+             Title="Car Details">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout>
+
+
+                    <Label x:Name="YourLableName" TextColor="White" FontSize="20" FontAttributes="Bold" TextDecorations="Underline" />
+
+
+                    <Image 
+                             x:Name="img"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    BackgroundColor="White"
+                             />
+            </StackLayout>
+
+                <FlexLayout HorizontalOptions="Fill" Direction="Row"
+                    AlignItems="End"
+                    JustifyContent="SpaceBetween">
+                    
+                    <ImageButton Source="heartsymbol.png"
+                             x:Name="btnUpdateFav"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Clicked="OnImageButtonClicked"
+                HeightRequest="40"
+                                     WidthRequest="40"
+                             />
+                    <ImageButton Source="zoomicon.png"
+                             x:Name="morepics"
+                    HorizontalOptions="End"
+                    VerticalOptions="End"
+                    Clicked="OnImageZoomButtonClicked"
+                                     HeightRequest="40"
+                                     WidthRequest="40"
+                             />
+                </FlexLayout>
+                <ImageButton Source="youtubebar.png"
+                             x:Name="youtube"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Clicked="OnImageYoutubeButtonClicked"
+                                     HeightRequest="50"
+                                     WidthRequest="200"
+                             />
+                <Button x:Name="websitebutton" Text="Official Website" HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" Clicked="OnWebsiteButtonClicked" />
+
+                <ListView x:Name="showFindRecordID" ItemsSource="{Binding ID}" HasUnevenRows="True" SeparatorVisibility="Default" VerticalOptions="FillAndExpand">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+
+                                    <BoxView Grid.Row="0" Grid.Column="0" Color="#1A315D"  />
+                                    <Label Grid.Row="0" Grid.Column="0" Text="Name" HorizontalOptions="Center" FontAttributes="Bold" TextColor="White"  />
+
+                                    <BoxView Grid.Row="0" Grid.Column="1" Color="LightBlue"  />
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" HorizontalOptions="Center" TextColor="Black"/>
+
+                                    <BoxView Grid.Row="1" Grid.Column="0" Color="#1A315D"  />
+                                    <Label Grid.Row="1" Grid.Column="0" Text="Model" HorizontalOptions="Center" FontAttributes="Bold" TextColor="White"/>
+
+                                    <BoxView Grid.Row="1" Grid.Column="1" Color="LightBlue"  />
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding Model}" HorizontalOptions="Center" TextColor="Black"/>
+
+                                    <BoxView Grid.Row="2" Grid.Column="0" Color="#1A315D"  />
+                                    <Label Grid.Row="2" Grid.Column="0" Text="Price" HorizontalOptions="Center" FontAttributes="Bold" TextColor="White"/>
+
+                                    <BoxView Grid.Row="2" Grid.Column="1" Color="LightBlue"  />
+                                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding Price}" HorizontalOptions="Center" TextColor="Black"/>
+
+                                    <BoxView Grid.Row="3" Grid.Column="0" Color="#1A315D"  />
+                                    <Label Grid.Row="3" Grid.Column="0" Text="Brand" HorizontalOptions="Center" FontAttributes="Bold" TextColor="White"/>
+
+                                    <BoxView Grid.Row="3" Grid.Column="1" Color="LightBlue"  />
+                                    <Label Grid.Row="3" Grid.Column="1" Text="{Binding Brand}" HorizontalOptions="Center" TextColor="Black"/>
+
+                                    <BoxView Grid.Row="4" Grid.Column="0" Color="#1A315D"  />
+                                    <Label Grid.Row="4" Grid.Column="0" Text="Body Type" HorizontalOptions="Center" FontAttributes="Bold" TextColor="White"/>
+
+                                    <BoxView Grid.Row="4" Grid.Column="1" Color="LightBlue"  />
+                                    <Label Grid.Row="4" Grid.Column="1" Text="{Binding BodyType}" HorizontalOptions="Center" TextColor="Black"/>
+
+                                    <BoxView Grid.Row="5" Grid.Column="0" Color="#1A315D"  />
+                                    <Label Grid.Row="5" Grid.Column="0" Text="Segment" HorizontalOptions="Center" FontAttributes="Bold" TextColor="White"/>
+
+                                    <BoxView Grid.Row="5" Grid.Column="1" Color="LightBlue"  />
+                                    <Label Grid.Row="5" Grid.Column="1" Text="{Binding Segment}" HorizontalOptions="Center" TextColor="Black"/>
+
+                                    <BoxView Grid.Row="6" Grid.Column="0" Color="#1A315D"  />
+                                    <Label Grid.Row="6" Grid.Column="0" Text="Engine" HorizontalOptions="Center" FontAttributes="Bold" TextColor="White"/>
+
+                                    <BoxView Grid.Row="6" Grid.Column="1" Color="LightBlue"  />
+                                    <Label Grid.Row="6" Grid.Column="1" Text="{Binding Engine}" HorizontalOptions="Center" TextColor="Black"/>
+
+                                    <BoxView Grid.Row="7" Grid.Column="0" Color="#1A315D"  />
+                                    <Label Grid.Row="7" Grid.Column="0" Text="Dimension Length*Width*Heigh(mm)" HorizontalOptions="Center" FontAttributes="Bold" TextColor="White"/>
+
+                                    <BoxView Grid.Row="7" Grid.Column="1" Color="LightBlue"  />
+                                    <Label Grid.Row="7" Grid.Column="1" Text="{Binding Dimension}" HorizontalOptions="Center" TextColor="Black"/>
+
+                                    <BoxView Grid.Row="8" Grid.Column="0" Color="#1A315D"  />
+                                    <Label Grid.Row="8" Grid.Column="0" Text="Fueltank (litres)" HorizontalOptions="Center" FontAttributes="Bold" TextColor="White"/>
+
+                                    <BoxView Grid.Row="8" Grid.Column="1" Color="LightBlue"  />
+                                    <Label Grid.Row="8" Grid.Column="1" Text="{Binding Fueltank}" HorizontalOptions="Center" TextColor="Black"/>
+
+                                    <BoxView Grid.Row="9" Grid.Column="0" Color="#1A315D"  />
+                                    <Label Grid.Row="9" Grid.Column="0" Text="Top Speed (km/h)" HorizontalOptions="Center" FontAttributes="Bold" TextColor="White"/>
+
+                                    <BoxView Grid.Row="9" Grid.Column="1" Color="LightBlue"  />
+                                    <Label Grid.Row="9" Grid.Column="1" Text="{Binding TopSpeed}" HorizontalOptions="Center" TextColor="Black"/>
+
+                                    <BoxView Grid.Row="10" Grid.Column="0" Color="#1A315D"  />
+                                    <Label Grid.Row="10" Grid.Column="0" Text="Features" HorizontalOptions="Center" FontAttributes="Bold" TextColor="White"/>
+
+                                    <BoxView Grid.Row="10" Grid.Column="1" Color="LightBlue"  />
+                                    <Label Grid.Row="10" Grid.Column="1" Text="{Binding Feature}" HorizontalOptions="Center" TextColor="Black"/>
+                                </Grid>
+
+                            </ViewCell>
+
+
+                        </DataTemplate>
+
+                    </ListView.ItemTemplate>
+
+                </ListView>
+                </StackLayout>
+
+            
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

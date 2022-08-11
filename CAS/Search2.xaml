@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CAS.Search2"
+             Title="Compare Search - Car 2">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Currently selected car:" TextColor="White"/>
+                <Label x:Name="YourLableName" FontAttributes="Italic" TextColor="White"/>
+
+                <Label FontSize="18" TextColor="White" FontAttributes="Bold" TextDecorations="Underline">Keyword Search
+                </Label>
+                <Entry x:Name="findKeyword" Placeholder="Enter your search keyword here" BackgroundColor="White"/>
+                <Button x:Name="btnFindByKeyword" Text="Search Keyword" Clicked="SearchByKeyword"/>
+
+
+
+                <Label FontSize="18" TextColor="White" FontAttributes="Bold" TextDecorations="Underline">Brand</Label>
+                <Picker x:Name="findBrand" Title="Select Brand" VerticalOptions="CenterAndExpand" BackgroundColor="White"/>
+                <Button x:Name="btnFindByBrand" Text="Search Keyword" Clicked="SearchByBrand"/>
+
+                <Label FontSize="18" TextColor="White" FontAttributes="Bold" TextDecorations="Underline">Type</Label>
+                <Picker x:Name="findBodyType" Title="Choose a Car's Body Type " VerticalOptions="CenterAndExpand" BackgroundColor="White"/>
+                <Button x:Name="btnFindByBodyType" Text="Search Keyword" Clicked="SearchByBodyType"/>
+
+
+                <Label FontSize="18" TextColor="White" FontAttributes="Bold" TextDecorations="Underline">Show all cars in the database</Label>
+                <Button x:Name="btnFindCompare" Text="Reveal All Cars" Clicked="ForwardAllResultComparison"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

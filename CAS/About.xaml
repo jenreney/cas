@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CAS.About">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            
+                <Image Source="casicon.png" />
+            
+            <Label Text="Car App Specs [CAS]"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                    Font="Bold"  TextColor="White" FontSize="30"
+                   FontAttributes="Bold" TextDecorations="Underline"/>
+            
+                <Label Text="Version : 1.0" 
+                   VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                    TextColor="White"/>
+            <Label Text="Developer : Yim Jen Nee" 
+                   VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                    TextColor="White"/>
+                <Label Text="This application allows user to view the latest information regarding cars from many brands, no matter how well-known they are in Malaysia. Upon selection of a car from categories, user will be able to see specifications and special features of a car that one would normally see on the flyer physically. Not only that, user can also see the front/back/sides preview of the car just from the application. User can also use the special feature of the application that will show information of two cars side-by-side so that user can make their own analysis and comparisons."
+                   VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                    TextColor="White"/>
+            
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
